@@ -561,7 +561,7 @@ public class LevelMakerEditor : EditorWindow {
         GUILayout.Label("In-apps settings:", EditorStyles.boldLabel, new GUILayoutOption[] { GUILayout.Width(150) });
 
         if (GUILayout.Button("Reset to default", new GUILayoutOption[] { GUILayout.Width(150) })) {
-            ResetInAppsSettings();
+
         }
 
         GUILayout.Space(10);
@@ -651,13 +651,7 @@ public class LevelMakerEditor : EditorWindow {
         GUILayout.EndHorizontal();
 
     }
-
-    void ResetInAppsSettings() {
-        lm.InAppIDs[0] = "gems10";
-        lm.InAppIDs[1] = "gems50";
-        lm.InAppIDs[2] = "gems100";
-        lm.InAppIDs[3] = "gems150";
-    }
+    
 
     #endregion
     void GUIHelp() {
@@ -1030,8 +1024,9 @@ public class LevelMakerEditor : EditorWindow {
         }
     }
 
-    void ResetShops() {
-
+    void ResetShops()
+    {
+        return;
         lm.gemsProducts[0].count = 10;
         lm.gemsProducts[0].price = 0.99f;
         lm.gemsProducts[1].count = 50;
